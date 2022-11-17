@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+	int n1;
+	printf("Enter size of set A\n");
+	scanf("%d",&n1);
+	int n2=pow(2,n1);
+	int a[n1],b[n2];
+	printf("enter elements of set A: ");
+	for(int i=0;i<n1;i++){
+		scanf("%d",&a[i]);
+	}
+	printf("phi ");
+	for(int i=0;i<n2;i++){
+		for(int j=0;j<n1;j++){
+			if(i&(1<<j))
+				printf("%d",a[j]);
+		}
+		printf(" ");
+		
+	}
+	
+	return 0;
+}
