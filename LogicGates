@@ -1,0 +1,116 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+void OrGate(){
+	printf("truth table of or gate\n");
+    for(int i=0;i<=1;i++ ){
+        for(int y=0;y<=1;y++){
+            if(i==1||y==1){
+                printf("%d\t%d\t1 \n",i,y);
+            }
+            else
+                printf("%d\t%d\t0 \n",i,y);
+    	}
+    }
+    
+}
+void AndGate(){
+	printf("truth table of And gate\n");
+    for(int i=0;i<=1;i++ ){
+        for(int y=0;y<=1;y++){
+            if(i==1&&y==1){
+                printf("%d\t%d\t1 \n",i,y);
+            }
+            else
+                printf("%d\t%d\t0 \n",i,y);
+    	}
+    }
+    
+}
+void NandGate(){
+	printf("truth table of nand gate\n");
+    for(int i=0;i<=1;i++ ){
+        for(int y=0;y<=1;y++){
+            if(i==1||y==1){
+                printf("%d\t%d\t0 \n",i,y);
+            }
+            else
+                printf("%d\t%d\t1 \n",i,y);
+    	}
+    }
+    
+}
+void NorGate(){
+	printf("truth table of nor gate\n");
+    for(int i=0;i<=1;i++ ){
+        for(int y=0;y<=1;y++){
+            if(i==0||y==0){
+                printf("%d\t%d\t1 \n",i,y);
+            }
+            else
+                printf("%d\t%d\t0 \n",i,y);
+    	}
+    }
+    
+}
+void XorGate(){
+	printf("truth table of xor gate\n");
+    for(int i=0;i<=1;i++ ){
+        for(int y=0;y<=1;y++){
+            if(i!=y){
+                printf("%d\t%d\t1 \n",i,y);
+            }
+            else
+                printf("%d\t%d\t0 \n",i,y);
+    	}
+    }
+    
+}
+void XnorGate(){
+	printf("truth table of xnor gate\n");
+    for(int i=0;i<=1;i++ ){
+        for(int y=0;y<=1;y++){
+            if(i==y){
+                printf("%d\t%d\t1 \n",i,y);
+            }
+            else
+                printf("%d\t%d\t0 \n",i,y);
+    	}
+    }
+    
+}
+
+int main() {
+    int n;
+    printf("Or = 0 \n");
+    printf("and = 1 \n");
+    printf("nand = 2 \n");
+    printf("nor = 3 \n");
+    printf("xor = 4 \n");
+    printf("Xnor = 5 \n");
+    scanf("%d",&n);
+    switch(n){
+    	case 0:
+    		OrGate();
+    		break;
+    	case 1:
+    		AndGate();
+    		break;
+    	case 2:
+    		NandGate();
+    		break;
+    	case 3:
+    		NorGate();
+    		break;
+    	case 4:
+    		XorGate();
+    		break;
+    	case 5:
+    		XnorGate();
+    		break;
+    	default :
+    		printf("invalid output :");
+    	
+    		
+	}
+    return 0;
+}
